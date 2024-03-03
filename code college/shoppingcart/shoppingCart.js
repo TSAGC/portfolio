@@ -11,6 +11,7 @@ function add_selection(x) {
     quantities[x] = quantities[x] + 1;
     // totals[x] = prices[x] * quantities[x];
     totalOrderAmt += prices[x];
+    totals[x] = quantities[x] * prices[x];
 
     display_all();
 }
@@ -21,6 +22,7 @@ function remove_selection(x) {
         quantities[x] = quantities[x] - 1;
         // totals[x] = prices[x] * quantities[x];
         totalOrderAmt += prices[x];
+        totals[x] = quantities[x] * prices[x];
         display_all();
     } else {
         alert(`cannot accept negative values`);
